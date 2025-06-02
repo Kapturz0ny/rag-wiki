@@ -21,6 +21,18 @@ dependencies = [
     "isort",
     "pip",
     "python-dotenv",
+    "datasets (>=3.6.0,<4.0.0)",
+    "spacy (>=3.8.7,<4.0.0)",
+    "wikipedia-api (>=0.8.1,<0.9.0)",
+    "tqdm (>=4.67.1,<5.0.0)",
+    "transformers (>=4.52.3,<5.0.0)",
+    "torch (>=2.7.0,<3.0.0)",
+    "sentence-transformers (>=4.1.0,<5.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "ipywidgets (>=8.1.7,<9.0.0)",
+    "wikipedia (>=1.4.0,<2.0.0)",
+    "langchain (>=0.3.25,<0.4.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
 ]
 requires-python = "~=3.12.0"
 
