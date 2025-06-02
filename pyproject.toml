@@ -1,40 +1,41 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
-[project]
+[tool.poetry]
 name = "rag_wiki"
 version = "0.0.1"
 description = "RAG model based on 1000 selected wikipedia articles"
-authors = [
-  { name = "Marcin Bagnowski" },
-]
-
+authors = ["Marcin Bagnowski <marcin.bagnowski@o2.pl>"]
 readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    
-]
-dependencies = [
-    "black",
-    "flake8",
-    "isort",
-    "pip",
-    "python-dotenv",
-    "datasets (>=3.6.0,<4.0.0)",
-    "spacy (>=3.8.7,<4.0.0)",
-    "wikipedia-api (>=0.8.1,<0.9.0)",
-    "tqdm (>=4.67.1,<5.0.0)",
-    "transformers (>=4.52.3,<5.0.0)",
-    "torch (>=2.7.0,<3.0.0)",
-    "sentence-transformers (>=4.1.0,<5.0.0)",
-    "ipykernel (>=6.29.5,<7.0.0)",
-    "ipywidgets (>=8.1.7,<9.0.0)",
-    "wikipedia (>=1.4.0,<2.0.0)",
-    "langchain (>=0.3.25,<0.4.0)",
-    "matplotlib (>=3.10.3,<4.0.0)",
-]
-requires-python = "~=3.12.0"
+package-mode = false
+
+[[tool.poetry.source]]
+name = "pytorch_cuda"
+url = "https://download.pytorch.org/whl/cu128"
+priority = "explicit"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+
+torch = { version = "^2.7.0", source = "pytorch_cuda" }
+torchvision = { version = "^0.22.0", source = "pytorch_cuda" }
+torchaudio = { version = "^2.7.0", source = "pytorch_cuda" } 
+black = "^25.1.0"
+flake8 = "^7.2.0"
+isort = "^6.0.1"
+python-dotenv = "^1.1.0"
+datasets = "^3.6.0"
+spacy = "^3.8.7"
+wikipedia = "^1.4.0"
+tqdm = "^4.67.1"
+transformers = "^4.52.4"
+sentence-transformers = "^4.1.0"
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.7"
+langchain = "^0.3.25"
+matplotlib = "^3.10.3"
+numpy = "^2.2.6"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 99
