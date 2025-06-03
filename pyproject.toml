@@ -36,6 +36,7 @@ accelerate = "^1.7.0"
 bitsandbytes = "^0.46.0"
 sentencepiece = "^0.2.0"
 protobuf = "^6.31.1"
+tensorboard = "^2.19.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
