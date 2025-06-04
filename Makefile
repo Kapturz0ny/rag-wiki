@@ -11,38 +11,23 @@ PYTHON_INTERPRETER = python
 #################################################################################
 
 
-## Install Python dependencies
-.PHONY: requirements
-requirements:
-	pip install -e .
-	
+## Create a virtual environment with the specified Python version
+.PHONY: install
+install:
+	poetry install --no-root
 
+## Create data dirs structure
+.PHONY: create-data-dirs
+create-data-dirs:
+	mkdir -p data/processed
+	mkdir -p data/raw
+	mkdir -p data/interim
 
-
-## Delete all compiled Python files
-.PHONY: clean
-clean:
-	find . -type f -name "*.py[co]" -delete
-	find . -type d -name "__pycache__" -delete
-
-
-## Lint using flake8, black, and isort (use `make format` to do formatting)
-.PHONY: lint
-lint:
-	flake8 rag_wiki
-	isort --check --diff rag_wiki
-	black --check rag_wiki
 
 ## Format source code with black
 .PHONY: format
 format:
-	isort rag_wiki
-	black rag_wiki
-
-
-
-
-
+	black notebooks/*.ipynb
 
 
 #################################################################################
