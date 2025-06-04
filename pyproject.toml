@@ -17,7 +17,7 @@ python = ">=3.12,<3.13"
 torch = { version = "^2.7.0", source = "pytorch_cuda" }
 torchvision = { version = "^0.22.0", source = "pytorch_cuda" }
 torchaudio = { version = "^2.7.0", source = "pytorch_cuda" } 
-black = "^25.1.0"
+black = {extras = ["jupyter"], version = "^25.1.0"}
 flake8 = "^7.2.0"
 isort = "^6.0.1"
 python-dotenv = "^1.1.0"
