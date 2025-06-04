@@ -7,7 +7,7 @@
 </a>
 
 
-### Własny mini-RAG z fine-tuningiem retrievera
+### Own RAG model with fine-tuned retriever
 
 This project implements a custom mini Retrieval-Augmented Generation (RAG) model with retriever fine-tuning. The RAG model is based on 1000 selected articles from Wikipedia.
 
@@ -20,6 +20,7 @@ This project was created for the **Podstawy wielkich modeli językowych z zastos
 ```
 ├── Makefile           <- Makefile with convenience commands.
 ├── README.md          <- The top-level README for developers using this project.
+├── documentation.pdf  <- Project documentation.
 ├── data               <- To get this data dir structure type "make create-data-dirs"
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
