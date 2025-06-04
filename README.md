@@ -32,8 +32,7 @@ This project was created for the **Podstawy wielkich modeli językowych z zastos
 ├── pyproject.toml     <- Project configuration file with package metadata for 
 │                         rag_wiki and configuration for tools like black.
 │
-├── reports            <- Project documentation.
-│   └── figures        <- Generated figures used in reporting.
+├── figures            <- Generated figures used in reporting.
 │
 └── requirements.txt   <- The requirements file for reproducing the analysis environment.
 ```
